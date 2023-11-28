@@ -1,0 +1,79 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Eshal's Portfolio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-5 mb-lg-3">
+
+
+        <li class="nav-item">
+        <% if (title=="Home") { %>
+          <a class="nav-link active" href="/home">
+        <% } else { %>
+          <a class="nav-link" href="/home">
+        <%} %> 
+          <i class="fa-solid fa-house"></i></i> Home</a>
+        
+        </li>
+        
+
+        <li class="nav-item">
+        <% if (title=="About") { %>
+          <a class="nav-link active" aria-current="page" href="/about">
+        <% } else { %>
+        <a class="nav-link" href="/about">
+        <%} %> 
+          <i class="fa-solid fa-person"></i>About</a>
+        </li>
+        
+
+      <li class="nav-item">
+        <% if (title=="Projects") { %>
+          <a class="nav-link active" aria-current="page" href="/projects">
+        <% } else { %>
+        <a class="nav-link" href="/projects">
+        <%} %> 
+          <i class="fa-solid fa-list-check"></i>Projects</a>
+        </li>
+
+       <li class="nav-item">
+        <% if (title=="Exercise List") { %>
+          <a class="nav-link active" aria-current="page" href="/exerciselist">
+        <% } else { %>
+        <a class="nav-link" href="/exerciselist">
+        <%} %> 
+          <i class="fa-solid fa-dumbbell"></i>Exercises</a>
+        </li>
+
+
+      <li class="nav-item">
+        <% if (title=="Contact") { %>
+          <a class="nav-link active" aria-current="page" href="/contact">
+        <% } else { %>
+        <a class="nav-link" href="/contact">
+        <%} %> 
+          <i class="fa-solid fa-address-book"></i>Contact</a>
+        </li>
+
+
+          <% if(typeof displayName == 'string' && displayName) { %>
+          <li class="navbar-text">
+            <i class="fas fa-lg fa-user"></i>
+            Welcome, <%= displayName %>
+          </li>
+          <li class="nav-item">
+              <a href="/logout" class="nav-link" >
+              <i class="fa-solid fa-sign-out-alt"></i> Logout</a>
+          </li>
+          <% } else { %>
+            <li class="nav-item">
+              <a href="/login" class="nav-link">
+              <i class="fa-solid fa-sign-in-alt"></i> Login</a>
+          </li>
+          <% } %>
+        </ul>
+      </div>
+    </div>
+  </nav>

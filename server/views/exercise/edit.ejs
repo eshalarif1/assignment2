@@ -1,0 +1,80 @@
+<% include ../partials/header.ejs %>
+<% include ../partials/main_nav.ejs %>
+<!--content for the edit page !--> 
+
+
+<!--creating a form!--> 
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6" width=800px height=900px>
+            <h1><%= title %></h1>
+            <form class="form" method="POST">
+                <div class="form-group">
+
+                    <label for="nameTextField">Exercise</label>
+                    <input type="text" class="form-control"
+                    id="nameTextField"
+                    placeholder="Enter an Exercise"
+                    name="name" 
+                    value = "<%= exercise.name %>" 
+                    required> 
+                </div>
+
+                <div class="form-group">
+                    <label for="targetTextField">Target</label>
+                    <input type="text" class="form-control"
+                    id="targetTextField"
+                    placeholder="Enter a target "
+                    name="target" 
+                    value ="<%= exercise.target %>" 
+                    required> 
+                </div>
+
+                <div class="form-group">
+                    <label for="descriptionTextField">Description</label>
+                    <input type="text" class="form-control"
+                    id="descriptionTextField"
+                    placeholder="Enter a description"
+                    name="description" required>
+                    <%= exercise.description %> 
+                </div>
+
+                <div class="form-group">
+                    <label for="descriptionTextArea">Duration</label>
+                    <textarea type="text" class="form-control"
+                    id="descriptionTextArea"
+                    placeholder="Enter the duration of the exercise"
+                    name="duration" 
+                    value ="<%= exercise.duration %>" 
+                    required> 
+                    </textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="repsTextField">Reps</label>
+                    <input type="text" class="form-control"
+                    id="repsTextField"
+                    placeholder="Enter the amount of reps"
+                    name="Reps" 
+                    value ="<%= exercise.Reps%>" 
+                    required> 
+                </div>
+
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i> Submit</button>
+                
+                    <a href="/exerciselist" class="btn btn-warning">
+                        <i class="fas fa-undo"></i> Cancel</a>
+
+            </form>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+<% include ../partials/bottom_navigation.ejs %>
+<% include ../partials/footer.ejs %>

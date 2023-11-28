@@ -1,0 +1,74 @@
+<% include ../partials/header.ejs %>
+<% include ../partials/main_nav.ejs %>
+
+<script>
+  function handleDelete(exerciseid) {
+    if (confirm('are you sure you want to delete this exercise')) {
+      fetch(/exerciselist/delete/${exerciseid}, {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+      .then(response => {
+        if (response.ok) {
+          location.reload(); // Refresh the page after successful deletion
+        } else {
+          throw new Error('Something went wrong while deleting');
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        // Handle error or show a message to the user
+      });
+    }
+  }
+</script>
+
+<main class="container">
+    <div class="row">
+        <div class="offset-md-1 col-md-10">
+            <h1><% title %> </h1>        
+
+            <a href ="/exerciselist/add" class = "btn btn-primary" role=button> 
+            <i class = "fas fa-plus-circle"> </i> Add an Exercise
+            </a> 
+            <br> 
+        
+        <br>
+        <table class="table table-bordered table-striped table-hover">
+            <tr class="d-flex">
+                <th class="text-center col-1">Name</th>
+                <th class="text-center col-1">Target</th>
+                <th class="text-center col-4">Description</th>
+                <th class="text-center col-2">Duration</th>
+                <th class="text-center col-1">Reps</th>
+                <th class="text-center col-1"></th>
+                <th class="text-center col-2"></th>
+            </tr>
+            <% for(let count=0;count<exerciselist.length;count++) { %>    
+            <tr class="d-flex">
+                <td class="text-center col-1"><%= exerciselist[count].name%></td>
+                <td class="text-center col-1"><%= exerciselist[count].target%></td>
+                <td class="text-center col-4"><%= exerciselist[count].description %></td>
+                <td class="text-center col-2"><%= exerciselist[count].duration%></td>
+                <td class="text-center col-1"><%= exerciselist[count].Reps%></td>
+                 <td class="text-center col-1">
+                 <a href="/exerciselist/edit/<%= exerciselist[count]._id %>"
+                 class= "btn btn-primary">
+                 <i class="fa-solid fa-pencil"></i> Edit </a> 
+                 </td>
+
+                <td class="text-center col-2">
+                 <a href="/exerciselist/delete/<%= exerciselist[count]._id %>"
+                 class= "btn btn-danger">
+                 <i class="fa-solid fa-trash"></i> Delete </a> 
+                 </td>
+               
+            <% } %>
+        </table>
+    </div>
+    </div>
+</main>
+<% include ../partials/bottom_navigation.ejs %>
+<% include ../partials/footer.ejs %>

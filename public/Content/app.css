@@ -1,0 +1,164 @@
+@charset "UTF-8";
+
+body {
+    background-color: rgb(1, 2, 29); 
+    font-family: erdana, Geneva, Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+
+.container{
+    width: 400px;
+    height: 750px;
+}
+.navbar-text{
+    align-items: center;
+    text-align: center;
+}
+
+    .listitems{
+        color:white;
+        text-align: left;
+    }
+    
+
+    .welcome-image {
+        border-radius: 50%;
+    }
+    
+
+    .navbar a:hover {
+        color: hsl(12, 62%, 91%); 
+    }
+    
+    .eshals-image{
+        margin-top: 80px;
+        margin-left: 400px;
+        text-align: center;
+    }
+    
+    .eshals-video{
+            margin-left: -940px;
+            margin-top: -345px;
+    }
+
+
+    .projects{
+        color: white;
+        text-align:left;
+    }
+
+    .navbar fixed-bottom navbar-dark bg-dark{
+            background-color: hsl(351, 72%, 86%);
+            color: #f6dfd9;
+        }
+
+    .aboutme1 {
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            background-color: rgb(1, 2, 29);
+            width: 1400px;
+            height: 600px;
+            margin-top: 5px;
+        }
+
+    .section {
+        background-color: rgb(1, 2, 29);
+        width: 1400px;
+        height: 300px;;
+
+    }
+
+    .rightsside{
+            font-size: 20px;
+            text-align: center;
+            margin-top: 5px;
+            height: 900px;
+            width: 1100x;
+            color: white;
+            background: -moz-linear-gradient(top, rgb(1, 2, 29) 0%, rgb(178, 187, 228) 100%);
+            background: -webkit-linear-gradient (top, rgb(1, 2, 29) 0%, rgb(178, 187, 228)100%);
+            background: -o-linear-gradient(top,  rgb(1, 2, 29)0%, rgb(178, 187, 228));
+            background: -o-linear-gradient(top,rgb(1, 2, 29)  0%, rgb(178, 187, 228));
+            background: -o-linear-gradient(top, rgb(1, 2, 29) 0%, rgb(178, 187, 228));
+            background: linear-gradient(to bottom, rgb(1, 2, 29),rgb(178, 187, 228));
+        
+        }
+
+
+    .circleimage{
+        align-items: center;
+        text-align: center;
+            }
+        
+    .boxes {
+        height: 255px;
+        color: white;
+        text-align: center;
+        font-weight: 400; 
+        background-color: hsl(351, 72%, 86%);
+        width:300px;float: right;
+        opacity: 100; 
+        margin-bottom: 20px; 
+        margin-right: 90px; 
+        margin-top: 50px;
+        opacity: 100;
+        
+        }
+    .boxes:hover {
+        color: rgb(178, 187, 228); 
+        }
+
+    .aboutmeinfo{ 
+        font-size: 20px;
+        text-align: center;
+        width: 700px;
+        height: 250px;
+        background-color: pink;
+        color: white;
+        margin-left: 300px;
+        margin-bottom: 40px;
+        text-decoration: none
+        }
+
+    .eshalsport{
+        background-color: rgb(1, 2, 29);
+        color: white;
+        text-align: center;
+        align-items: center;
+        margin-top: 5px;
+        width: 1400px;
+        height: 400px;
+        font-size: 20px;
+        }
+        
+    .feedbackform{
+        color: white;
+        align-items: center;
+        background-color: rgb(1, 2, 29);
+        text-align: center;
+        margin-top: 5px;
+        height: 700px;
+        width: 1300px;
+        }
+        
+
+    .container-head{
+        text-align: center;
+        background-color: hsl(351, 72%, 86%);
+        color: white;
+        margin: 0;
+        padding: 3%;
+        text-align: center;
+        font-size: 25;
+        position: relative;
+
+        }
+        
+
+    .container-fluid{
+        background-color: rgb(1, 2, 29);
+        
+        }
